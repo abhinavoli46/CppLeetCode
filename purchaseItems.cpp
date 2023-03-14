@@ -5,7 +5,7 @@ int countMaxItems(vector<int> v,int n,int money)
 {
     int count = 0;
     priority_queue<int,vector<int>,greater<int>> pq(v.begin(),v.end());
-    while(money >= pq.top())
+    while(money >= pq.top() && pq.empty() == false && money >= 0)
     {
         money -= pq.top();
         count++;
