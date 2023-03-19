@@ -1,4 +1,4 @@
-//Given n items, we need to distribute these items into k sets such that we get maximum distinct items in a set.
+//This program distribute n items into k elements subsets such that we get maximum distinct items in a subset.
 // if arr[] = {1,1,2,4,6,2} and k is multiple of n. We need to find count of distinct elements in the subset of max length k.
 
 #include<bits/stdc++.h>
@@ -13,7 +13,7 @@ int countDistinctInASubset(int *arr,int n,int k)
     }
     int size = us.size();
 
-    if(size > n/k)
+    if(size >= n/k)
     {
         return n/k;
     }
